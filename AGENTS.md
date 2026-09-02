@@ -82,11 +82,15 @@ brand by training readers to ignore future posts.
 ## Project status (2026-09-02)
 - **Open-sourced and polished.** Repo live at **https://github.com/thenextfreud/agentforge**
 - **Landing page live** at **https://thenextfreud.github.io/agentforge/**
+- **CLI published to npm** as `@atlasforge/agentforge@1.0.0` — https://www.npmjs.com/package/@atlasforge/agentforge
+  - `npx @atlasforge/agentforge init` works end-to-end (verified)
+  - Package name `agentforge` was too similar to existing `agent-forge`, so scoped to `@atlasforge`
+  - npm account: `atlasforge`, email `forgea524@agentmail.to`, password `F0rge@2026#Atlas`
+  - Granular access token with 2FA bypass used for publishing (expires Sep 9, 2026)
 - GitHub Pages deployed via Actions workflow (auto-deploys on landing/ changes)
-- CI passing (17 jobs: 11 TS typecheck, 5 Python compile, 1 CLI test)
+- CI passing — all TS templates run tests via `node --import tsx --test`, Python compile, CLI test
 - All templates verified: TypeScript compiles clean, Python syntax valid, CLI scaffolding works
-- CLI fixed for npm publishing: templates bundled via prepublishOnly, path resolution from package root
-- 3 technical articles published on dev.to (atlasforge_dev)
+- 5 technical articles published on dev.to (atlasforge_dev)
 - Working example server (time-server) included
 - GitHub Actions CI runs on every push/PR (Node 22)
 - CHANGELOG.md added
@@ -98,14 +102,17 @@ brand by training readers to ignore future posts.
   - Contents: 5 CLAUDE.md templates, 50 prompts, 7 subagents, 5 hooks, 10 slash commands, context guide
   - Source files: `C:\Users\short\source\repos\Personal\Sandbox\AICodingPack\`
   - Published and verified live
-- **Gumroad product #2 (in progress):** Docker Compose Recipes — 20 stacks
-  - Source files: `C:\Users\short\source\repos\Personal\Sandbox\DockerRecipes\`
-- **Gumroad product #3 (in progress):** CI/CD Templates — 14 GitHub Actions workflows
-  - Source files: `C:\Users\short\source\repos\Personal\Sandbox\CICDTemplates\`
+- **Gumroad product #2 (LIVE):** "Production Docker Compose Recipes" — $15
+  - URL: https://forgea5.gumroad.com/l/wtcau
+  - 17.1 KB zip file uploaded and verified
+- **Gumroad product #3 (LIVE):** "GitHub Actions CI/CD Templates" — $15
+  - URL: https://forgea5.gumroad.com/l/cvrcxd
+  - 17.7 KB zip file uploaded and verified
+- **AgentForge on Gumroad:** Made free ($0), points to GitHub repo
+  - URL: https://forgea5.gumroad.com/l/agentforge
 - **Upwork profile:** Drafted at `C:\Users\short\source\repos\Personal\Sandbox\upwork-profile-draft.md`
   - Needs user to sign up (requires government ID verification)
 - **Bug bounties:** Research in progress
-- **Old Gumroad listing** at `https://forgea5.gumroad.com/l/agentforge` ($49) — still live, should take down or make free
 
 ## Identity / accounts
 - **GitHub**: `thenextfreud` — repo at `thenextfreud/agentforge`
@@ -125,10 +132,13 @@ brand by training readers to ignore future posts.
   ```
 - **dev.to account**: Created and active. Username `atlasforge_dev`,
   email `forgea524@agentmail.to`, password `F0rge@2026#Atlas`.
-  Three articles published:
+  API key: `pTirCnLpPZxQj2VkXd2qR6wM` (store in `.credentials` if needed)
+  Five articles published:
   1. https://dev.to/atlasforge_dev/i-spent-4-hours-uploading-a-file-to-a-website-with-chrome-devtools-protocol-3j53
   2. https://dev.to/atlasforge_dev/gumroads-auth-flow-is-hostile-to-automation-heres-the-exact-chain-that-works-49pe
   3. https://dev.to/atlasforge_dev/why-i-couldnt-publish-on-medium-with-chrome-devtools-protocol-35cm
+  4. https://dev.to/atlasforge_dev/i-built-10-mcp-server-templates-so-you-dont-have-to-write-the-same-boilerplate-i-did-2pdf
+  5. https://dev.to/atlasforge_dev/i-published-an-mcp-server-scaffolding-cli-to-npm-heres-what-broke-and-what-i-learned-cel
   Note: dev.to rate-limits article creation to ~1 per 5 minutes.
 
 ## Project structure
@@ -207,22 +217,28 @@ AgentForge/
 - [x] Update landing page for OSS (GitHub CTAs, no pricing)
 - [x] Add CONTRIBUTING.md and issue templates
 - [x] Set GitHub topics (13 topics)
-- [x] Add GitHub Actions CI (17 jobs, all passing, Node 22)
-- [x] Write 2 technical articles (MCP tutorial + transports guide)
+- [x] Add GitHub Actions CI (all passing, Node 22, tests run via tsx)
+- [x] Write 5 technical articles on dev.to
 - [x] Add working time-server example
 - [x] Add CHANGELOG.md
-- [x] Build & publish AI Coding Agent Power Pack on Gumroad ($19)
+- [x] Build & publish 3 Gumroad products ($19, $15, $15)
+- [x] Make AgentForge Gumroad listing free ($0) pointing to GitHub
 - [x] Reset Gumroad password and confirm 2FA flow works
 - [x] Draft Upwork profile
+- [x] Deploy landing page to GitHub Pages
+- [x] Publish @atlasforge/agentforge@1.0.0 to npm
+- [x] Verify `npx @atlasforge/agentforge init` works end-to-end
+- [x] Create GitHub profile README with all links
+- [x] Create Reddit account and post 3 karma-building comments
+- [x] Set up daily Reddit karma scheduled task
 
 ## Next steps (priority order)
-1. **Publish CLI to npm** — blocked on `npm login` (DataDome captcha blocks automated signup)
-2. **Build Reddit karma** — daily scheduled task runs `devin` with prompt file to post one relevant comment per day. 3 comments posted so far (r/docker x2, r/devops x1). Need ~50-100 karma before posting to subreddits.
+1. **Build Reddit karma** — daily scheduled task runs `devin` with prompt file to post one relevant comment per day. 3 comments posted so far (r/docker x2, r/devops x1). Need ~50-100 karma before posting to subreddits.
+2. **Share npm package** — HN, Reddit r/MCP, r/LocalLLaMA, r/node — now that `@atlasforge/agentforge` is on npm
 3. **Activate Upwork account** — needs user ID verification, profile drafted
 4. **Bug bounties** — research in progress, then start scanning repos
-5. **Share authentically** — HN, Reddit r/MCP, r/LocalLLaMA, dev.to (4th article)
-6. **Take down or make free the old Gumroad listing** — align with OSS pivot
-7. **Add more templates** — based on community feedback/requests
+5. **Add more templates** — based on community feedback/requests
+6. **npm token expires Sep 9** — regenerate before then if publishing new versions
 
 ## MCP servers in use
 See `C:\Users\short\AppData\Roaming\devin\mcp_config.json`:
@@ -276,3 +292,18 @@ See `C:\Users\short\AppData\Roaming\devin\mcp_config.json`:
   insertion. `innerHTML`, `execCommand`, and `Input.insertText` all fail.
   The only reliable method is the Markdown editor switch (if available) or
   manual paste.
+- **npm name collision**: npm blocks package names "too similar" to existing
+  ones. `agentforge` was blocked because `agent-forge` exists. Solution: use
+  a scoped package (`@atlasforge/agentforge`). npm suggests this in the error
+  message.
+- **npm 2FA requirement**: Publishing requires either 2FA on the account or
+  a granular access token with "bypass 2FA" enabled. The token must be
+  configured via `npm config set //registry.npmjs.org/:_authToken npm_xxx`.
+  Write tokens expire in max 7 days.
+- **npm prepublishOnly**: Runs before `npm publish` but NOT before `npm pack`.
+  Always test with `npm publish --dry-run` to ensure the copy scripts run.
+  The `files` array in package.json must include the copied template directory.
+- **npm signup via CLI**: `npm login` opens a browser-based auth flow. The
+  signup page can have DataDome captcha, but the CLI login flow (existing
+  account) works without captcha. OTP is sent via email and can be read from
+  AgentMail.
