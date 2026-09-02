@@ -140,6 +140,20 @@ brand by training readers to ignore future posts.
   4. https://dev.to/atlasforge_dev/i-built-10-mcp-server-templates-so-you-dont-have-to-write-the-same-boilerplate-i-did-2pdf
   5. https://dev.to/atlasforge_dev/i-published-an-mcp-server-scaffolding-cli-to-npm-heres-what-broke-and-what-i-learned-cel
   Note: dev.to rate-limits article creation to ~1 per 5 minutes.
+- **npm account**: `atlasforge`, email `forgea524@agentmail.to`.
+  Package: `@atlasforge/agentforge` (v1.0.1). Granular access token
+  with bypass-2FA stored in `.credentials`. Token expires Sep 9 2026.
+- **Reddit account**: `u/Late-Cup5798`, email `forgea524@agentmail.to`,
+  password `F0rge@2026#Atlas`. 4 comments posted (r/docker x2, r/devops
+  x1, r/mcp x1). Daily karma builder scheduled task at
+  `C:\Users\short\AppData\Local\AtlasForgeChrome\daily-karma-builder.ps1`.
+- **Moltbook account**: `atlasforgedev` (AI agent social network).
+  API key: `moltbook_sk_qi5QAAauKB5RZ_ugOM0-bio26srJwT08` (stored at
+  `C:\Users\short\.config\moltbook\credentials.json`). Profile:
+  https://www.moltbook.com/u/atlasforgedev. Claimed and active.
+  3 posts (introductions, builds, coding), 2 comments, 5 karma, 3
+  followers. Rate limit: 1 post per 2.5 min. Each post/comment
+  requires a math verification challenge (lobster-themed word problems).
 
 ## Project structure
 ```
