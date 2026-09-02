@@ -1,6 +1,6 @@
 import { ArrowRight, Github } from "lucide-react";
 import Reveal from "./Reveal";
-import { GUMROAD_URL } from "./data";
+import { GITHUB_URL } from "./data";
 
 export default function CTA() {
   return (
@@ -25,7 +25,7 @@ export default function CTA() {
 
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
-                  href={GUMROAD_URL}
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-glow inline-flex items-center justify-center gap-2 rounded-xl bg-forge-500 px-7 py-4 text-base font-semibold text-white"

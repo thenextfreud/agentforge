@@ -7,7 +7,7 @@ import {
   Terminal,
 } from "lucide-react";
 
-export const GUMROAD_URL = "https://github.com/thenextfreud/agentforge";
+export const GITHUB_URL = "https://github.com/thenextfreud/agentforge";
 
 export const features = [
   {

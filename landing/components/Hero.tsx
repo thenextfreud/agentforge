@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles, Github } from "lucide-react";
 import CodePreview from "./CodePreview";
 import Reveal from "./Reveal";
-import { GUMROAD_URL } from "./data";
+import { GITHUB_URL } from "./data";
 
 export default function Hero() {
   return (
@@ -38,7 +38,7 @@ export default function Hero() {
 
             <Reveal variant="up" delay={4} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href={GUMROAD_URL}
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-glow inline-flex items-center justify-center gap-2 rounded-xl bg-forge-500 px-6 py-3.5 text-base font-semibold text-white"

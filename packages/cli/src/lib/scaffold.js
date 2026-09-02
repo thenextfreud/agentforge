@@ -10,15 +10,15 @@ const EXCLUDE_DIRS = new Set(["node_modules", "dist", ".git", "__pycache__", ".v
 const EXCLUDE_FILES = new Set([".env", "package-lock.json", "yarn.lock", "pnpm-lock.yaml"]);
 
 /**
- * Resolve the absolute path to the project root (the AgentForge repo root).
- * The CLI lives at <root>/packages/cli/src/lib/scaffold.js, so the root is
- * four levels up from this file.
+ * Resolve the absolute path to the package root.
+ * When running from the repo: <root>/packages/cli/src/lib/scaffold.js → up 2 = packages/cli/
+ * When installed from npm: node_modules/agentforge/src/lib/scaffold.js → up 2 = agentforge/
+ * Templates are bundled at <packageRoot>/templates/ in both cases.
  * @returns {string}
  */
 export function getProjectRoot() {
-  // packages/cli/src/lib/scaffold.js → up 4 = repo root
   const __filename = fileURLToPath(import.meta.url);
-  return path.resolve(path.dirname(__filename), "..", "..", "..", "..");
+  return path.resolve(path.dirname(__filename), "..", "..");
 }
 
 /**

@@ -34,3 +34,6 @@ npm-debug.log*
 landing/.next/
 landing/node_modules/
 landing/out/
+
+# CLI: templates copied by prepublishOnly (not committed)
+packages/cli/templates/

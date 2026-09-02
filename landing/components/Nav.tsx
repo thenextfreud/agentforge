@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Flame, Menu, X, Github } from "lucide-react";
-import { GUMROAD_URL } from "./data";
+import { GITHUB_URL } from "./data";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -54,7 +54,7 @@ export default function Nav() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href={GUMROAD_URL}
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow inline-flex items-center gap-2 rounded-lg bg-forge-500 px-4 py-2 text-sm font-semibold text-white"
@@ -87,7 +87,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href={GUMROAD_URL}
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

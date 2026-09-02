@@ -1,5 +1,5 @@
 import { Flame, Github, Twitter } from "lucide-react";
-import { GUMROAD_URL } from "./data";
+import { GITHUB_URL } from "./data";
 
 const cols = [
   {
@@ -14,7 +14,7 @@ const cols = [
   {
     title: "GitHub",
     links: [
-      { label: "Source Code", href: GUMROAD_URL },
+      { label: "Source Code", href: GITHUB_URL },
       { label: "Issues", href: "https://github.com/thenextfreud/agentforge/issues" },
       { label: "MIT License", href: "https://github.com/thenextfreud/agentforge/blob/master/LICENSE" },
     ],
@@ -48,7 +48,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
-                href={GUMROAD_URL}
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

@@ -1,6 +1,6 @@
 import { Check, ArrowRight, Github, FileText, Boxes, Terminal, Heart } from "lucide-react";
 import Reveal from "./Reveal";
-import { GUMROAD_URL } from "./data";
+import { GITHUB_URL } from "./data";
 
 const included = [
   "All 15 templates (10 MCP servers + 5 agent patterns)",
@@ -55,7 +55,7 @@ export default function Pricing() {
                 </p>
 
                 <a
-                  href={GUMROAD_URL}
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-glow mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-forge-500 px-6 py-4 text-base font-semibold text-white sm:w-auto"
