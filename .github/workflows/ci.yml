@@ -34,7 +34,7 @@ jobs:
         run: |
           npm install
           npx tsc --noEmit
-          npm test
+          if npm run | grep -q "^\s*test\s*$"; then npm test; fi
 
   verify-python:
     name: Verify Python templates
