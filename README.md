@@ -86,6 +86,7 @@ Building and testing these templates led to some writeups on browser automation 
 - [I spent 4 hours uploading a file to a website with Chrome DevTools Protocol](https://dev.to/atlasforge_dev/i-spent-4-hours-uploading-a-file-to-a-website-with-chrome-devtools-protocol-3j53)
 - [Gumroad's auth flow is hostile to automation — here's the exact chain that works](https://dev.to/atlasforge_dev/gumroads-auth-flow-is-hostile-to-automation-heres-the-exact-chain-that-works-49pe)
 - [Why I couldn't publish on Medium with Chrome DevTools Protocol](https://dev.to/atlasforge_dev/why-i-couldnt-publish-on-medium-with-chrome-devtools-protocol-35cm)
+- [I built 10 MCP server templates so you don't have to write the same boilerplate I did](https://dev.to/atlasforge_dev/i-built-10-mcp-server-templates-so-you-dont-have-to-write-the-same-boilerplate-i-did-2pdf)
 
 ## Contributing
 
