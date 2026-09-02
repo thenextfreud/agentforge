@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Flame, Menu, X } from "lucide-react";
+import { Flame, Menu, X, Github } from "lucide-react";
 import { GUMROAD_URL } from "./data";
 
 const links = [
   { label: "Features", href: "#features" },
   { label: "Templates", href: "#templates" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Get Started", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -59,7 +59,8 @@ export default function Nav() {
             rel="noopener noreferrer"
             className="btn-glow inline-flex items-center gap-2 rounded-lg bg-forge-500 px-4 py-2 text-sm font-semibold text-white"
           >
-            Get AgentForge — $49
+            <Github className="h-4 w-4" />
+            Star on GitHub
           </a>
         </div>
 
@@ -90,9 +91,10 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-lg bg-forge-500 px-4 py-2.5 text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-forge-500 px-4 py-2.5 text-sm font-semibold text-white"
             >
-              Get AgentForge — $49
+              <Github className="h-4 w-4" />
+              Star on GitHub
             </a>
           </div>
         </div>

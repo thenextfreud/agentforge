@@ -1,4 +1,4 @@
-import { Check, ArrowRight, Infinity as InfinityIcon, FileText, Boxes, Terminal } from "lucide-react";
+import { Check, ArrowRight, Github, FileText, Boxes, Terminal, Heart } from "lucide-react";
 import Reveal from "./Reveal";
 import { GUMROAD_URL } from "./data";
 
@@ -12,8 +12,8 @@ const included = [
 ];
 
 const badges = [
-  { icon: InfinityIcon, label: "Lifetime updates" },
-  { icon: FileText, label: "Commercial license" },
+  { icon: Heart, label: "Free forever" },
+  { icon: FileText, label: "MIT licensed" },
   { icon: Boxes, label: "15 templates" },
   { icon: Terminal, label: "CLI included" },
 ];
@@ -25,14 +25,14 @@ export default function Pricing() {
       <div className="relative mx-auto max-w-5xl px-5 sm:px-6">
         <Reveal variant="fade" className="mx-auto max-w-2xl text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-forge-400">
-            Pricing
+            Get started
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            One payment. Yours forever.
+            Free. Open source. Yours to use.
           </h2>
           <p className="mt-4 text-zinc-400">
-            No subscriptions, no per-seat pricing. Buy once and use it on every
-            project you ever build.
+            No subscriptions, no paywalls. Clone the repo or use the CLI and
+            start building immediately.
           </p>
         </Reveal>
 
@@ -42,17 +42,16 @@ export default function Pricing() {
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-forge-500/60 to-transparent" />
 
             <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
-              {/* left: price + CTA */}
+              {/* left: CTA */}
               <div>
                 <div className="flex items-end gap-3">
                   <span className="text-6xl font-semibold tracking-tight text-white sm:text-7xl">
-                    $49
+                    $0
                   </span>
-                  <span className="mb-2 text-sm text-zinc-500">one-time</span>
+                  <span className="mb-2 text-sm text-zinc-500">MIT licensed</span>
                 </div>
                 <p className="mt-3 text-sm text-zinc-400">
-                  Save 40+ hours of boilerplate. That&apos;s just over $1 per
-                  hour saved.
+                  Save 40+ hours of boilerplate. Star the repo if it helps you.
                 </p>
 
                 <a
@@ -61,11 +60,12 @@ export default function Pricing() {
                   rel="noopener noreferrer"
                   className="btn-glow mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-forge-500 px-6 py-4 text-base font-semibold text-white sm:w-auto"
                 >
-                  Buy on Gumroad
+                  <Github className="h-5 w-5" />
+                  Star on GitHub
                   <ArrowRight className="h-4.5 w-4.5" />
                 </a>
                 <p className="mt-3 text-xs text-zinc-500">
-                  Instant download · Secure checkout via Gumroad
+                  git clone · npx agentforge init · npm install
                 </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-3">

@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Github } from "lucide-react";
 import CodePreview from "./CodePreview";
 import Reveal from "./Reveal";
 import { GUMROAD_URL } from "./data";
@@ -43,7 +43,8 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="btn-glow inline-flex items-center justify-center gap-2 rounded-xl bg-forge-500 px-6 py-3.5 text-base font-semibold text-white"
               >
-                Get AgentForge — $49
+                <Github className="h-4.5 w-4.5" />
+                Star on GitHub
                 <ArrowRight className="h-4.5 w-4.5" />
               </a>
               <a
@@ -57,15 +58,15 @@ export default function Hero() {
             <Reveal variant="fade" delay={5} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-zinc-500">
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                One-time payment
+                MIT licensed
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-forge-400" />
-                Lifetime updates
+                Free forever
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
-                Commercial license
+                15 templates
               </span>
             </Reveal>
           </div>

@@ -3,19 +3,20 @@ import { GUMROAD_URL } from "./data";
 
 const cols = [
   {
-    title: "Product",
+    title: "Project",
     links: [
       { label: "Features", href: "#features" },
       { label: "Templates", href: "#templates" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Get Started", href: "#pricing" },
       { label: "FAQ", href: "#faq" },
     ],
   },
   {
-    title: "Buy",
+    title: "GitHub",
     links: [
-      { label: "Get AgentForge — $49", href: GUMROAD_URL },
-      { label: "Gumroad", href: GUMROAD_URL },
+      { label: "Source Code", href: GUMROAD_URL },
+      { label: "Issues", href: "https://github.com/thenextfreud/agentforge/issues" },
+      { label: "MIT License", href: "https://github.com/thenextfreud/agentforge/blob/master/LICENSE" },
     ],
   },
   {
@@ -47,7 +48,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
-                href="https://github.com"
+                href={GUMROAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

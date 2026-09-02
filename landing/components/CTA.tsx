@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import Reveal from "./Reveal";
 import { GUMROAD_URL } from "./data";
 
@@ -19,8 +19,8 @@ export default function CTA() {
                 Start shipping agents.
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-zinc-400">
-                Get the complete AgentForge kit — 15 templates, CLI, docs, and
-                lifetime updates — for a single $49 payment.
+                15 production-ready templates. MIT-licensed. Free on GitHub.
+                Clone, scaffold, and start building in 30 seconds.
               </p>
 
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -30,7 +30,8 @@ export default function CTA() {
                   rel="noopener noreferrer"
                   className="btn-glow inline-flex items-center justify-center gap-2 rounded-xl bg-forge-500 px-7 py-4 text-base font-semibold text-white"
                 >
-                  Get AgentForge — $49
+                  <Github className="h-5 w-5" />
+                  Star on GitHub
                   <ArrowRight className="h-4.5 w-4.5" />
                 </a>
                 <a

@@ -48,7 +48,7 @@ const HELP = `
     10 MCP Server templates (5 TypeScript + 5 Python)
     5  AI Agent templates (TypeScript)
 
-  For more info: https://github.com/agentforge/agentforge
+  For more info: https://github.com/thenextfreud/agentforge
 `;
 
 // ── Argument parsing ──────────────────────────────────────────

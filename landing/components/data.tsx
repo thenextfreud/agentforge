@@ -7,7 +7,7 @@ import {
   Terminal,
 } from "lucide-react";
 
-export const GUMROAD_URL = "https://forgea5.gumroad.com/l/agentforge";
+export const GUMROAD_URL = "https://github.com/thenextfreud/agentforge";
 
 export const features = [
   {
@@ -174,16 +174,16 @@ export const faqs = [
     a: "Model Context Protocol is an open standard that lets AI assistants like Claude securely call external tools and access data sources.",
   },
   {
-    q: "What's the difference between the free and paid version?",
-    a: "There is no free version. AgentForge is a premium kit. The quality and comprehensiveness justify the price — it saves you 40+ hours of boilerplate.",
+    q: "Is it really free?",
+    a: "Yes. AgentForge is MIT-licensed and free on GitHub. Use it for personal projects, client work, whatever you want.",
   },
   {
     q: "Can I use this for client projects?",
-    a: "Yes. The commercial license allows unlimited use in personal and client projects.",
+    a: "Yes. The MIT license allows unlimited use in personal and commercial projects. Attribution appreciated but not required.",
   },
   {
-    q: "Do I get updates?",
-    a: "Yes, lifetime updates are included. As MCP and AI agent patterns evolve, you get the latest templates.",
+    q: "How do I get started?",
+    a: "Run npx agentforge init to scaffold a new project, or clone a template directly from the GitHub repo.",
   },
   {
     q: "What languages are supported?",

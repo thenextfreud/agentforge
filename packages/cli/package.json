@@ -23,7 +23,12 @@
     "cli"
   ],
   "author": "AgentForge",
-  "license": "Commercial",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thenextfreud/agentforge"
+  },
+  "homepage": "https://github.com/thenextfreud/agentforge",
   "engines": {
     "node": ">=18.0.0"
   },

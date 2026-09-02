@@ -41,6 +41,14 @@ function validateProjectName(name) {
 export async function runInit(args) {
   info("AgentForge — Scaffold a new MCP server or AI agent\n");
 
+  // Parse flags: --template <id> for non-interactive use
+  const templateFlagIdx = args.indexOf("--template");
+  let templateId = null;
+  if (templateFlagIdx !== -1 && args[templateFlagIdx + 1]) {
+    templateId = args[templateFlagIdx + 1];
+    args = args.filter((_, i) => i !== templateFlagIdx && i !== templateFlagIdx + 1);
+  }
+
   // 1. Get project name (from arg or prompt).
   let projectName = args[0];
   if (!projectName) {
@@ -68,38 +76,51 @@ export async function runInit(args) {
     }
   }
 
-  // 3. Show category options and let user pick.
-  const categoryOptions = getCategoryOptions();
-  const selected = await select(
-    "Choose a template category:",
-    categoryOptions.map((opt) => ({
-      label: opt.label,
-      description: `${templatesByCategory(opt.category, opt.language).length} template(s) available`,
-      value: opt,
-    }))
-  );
+  // 3. Show category options and let user pick (or use --template flag).
+  let template;
 
-  // 4. Show templates in the selected category.
-  const categoryTemplates = templatesByCategory(selected.category, selected.language);
+  if (templateId) {
+    // Non-interactive mode: --template <id>
+    template = getTemplateById(templateId);
+    if (!template) {
+      error(`Template "${templateId}" not found in registry.`);
+      error(`Run "agentforge list" to see available templates.`);
+      process.exit(1);
+    }
+  } else {
+    // Interactive mode
+    const categoryOptions = getCategoryOptions();
+    const selected = await select(
+      "Choose a template category:",
+      categoryOptions.map((opt) => ({
+        label: opt.label,
+        description: `${templatesByCategory(opt.category, opt.language).length} template(s) available`,
+        value: opt,
+      }))
+    );
 
-  if (categoryTemplates.length === 0) {
-    error("No templates found in this category.");
-    process.exit(1);
-  }
+    // 4. Show templates in the selected category.
+    const categoryTemplates = templatesByCategory(selected.category, selected.language);
 
-  const chosenTemplateId = await select(
-    `Choose a template (${selected.label}):`,
-    categoryTemplates.map((t) => ({
-      label: t.name,
-      description: t.description,
-      value: t.id,
-    }))
-  );
+    if (categoryTemplates.length === 0) {
+      error("No templates found in this category.");
+      process.exit(1);
+    }
 
-  const template = getTemplateById(chosenTemplateId);
-  if (!template) {
-    error(`Template "${chosenTemplateId}" not found in registry.`);
-    process.exit(1);
+    const chosenTemplateId = await select(
+      `Choose a template (${selected.label}):`,
+      categoryTemplates.map((t) => ({
+        label: t.name,
+        description: t.description,
+        value: t.id,
+      }))
+    );
+
+    template = getTemplateById(chosenTemplateId);
+    if (!template) {
+      error(`Template "${chosenTemplateId}" not found in registry.`);
+      process.exit(1);
+    }
   }
 
   // 5. Scaffold.
