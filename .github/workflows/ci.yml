@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  verify-typescript:
+    name: Verify TypeScript templates
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        template:
+          - templates/typescript/01-hello-world-stdio
+          - templates/typescript/02-rest-api-wrapper
+          - templates/typescript/03-database-query-server
+          - templates/typescript/04-filesystem-tools
+          - templates/typescript/05-web-search-fetch
+          - templates/agents/01-react-agent
+          - templates/agents/02-tool-use-agent
+          - templates/agents/03-rag-agent
+          - templates/agents/04-multi-agent
+          - templates/agents/05-human-in-loop
+          - examples/time-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install and typecheck
+        working-directory: ${{ matrix.template }}
+        run: |
+          npm install
+          npx tsc --noEmit
+
+  verify-python:
+    name: Verify Python templates
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        template:
+          - templates/python/06-rag-knowledge-server
+          - templates/python/07-oauth-protected-server
+          - templates/python/08-saas-integration-template
+          - templates/python/09-multi-tool-toolkit
+          - templates/python/10-streaming-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify syntax
+        working-directory: ${{ matrix.template }}
+        run: |
+          find . -name "*.py" -exec python -m py_compile {} +
+          echo "All Python files compile OK"
+
+  verify-cli:
+    name: Verify CLI tool
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Test CLI commands
+        working-directory: packages/cli
+        run: |
+          node src/index.js --help
+          node src/index.js --version
+          node src/index.js list
+          node src/index.js info ts-hello-world
+          node src/index.js init test-project --template ts-hello-world
+          test -f test-project/package.json
+          echo "CLI scaffolding works!"
