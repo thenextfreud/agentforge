@@ -1,6 +1,8 @@
 # AgentForge
 
 > Production-ready templates for building [MCP servers](https://modelcontextprotocol.io/) and AI agents.
+>
+> Landing page: https://thenextfreud.github.io/agentforge/
 
 Stop writing boilerplate. Pick a template, run `npm install` (or `pip install`), and start building your actual logic.
 

@@ -81,13 +81,16 @@ brand by training readers to ignore future posts.
 
 ## Project status (2026-09-02)
 - **Open-sourced and polished.** Repo live at **https://github.com/thenextfreud/agentforge**
-- 9 commits, 298+ files, CI passing (17 jobs: 11 TS typecheck, 5 Python compile, 1 CLI test)
+- **Landing page live** at **https://thenextfreud.github.io/agentforge/**
+- GitHub Pages deployed via Actions workflow (auto-deploys on landing/ changes)
+- CI passing (17 jobs: 11 TS typecheck, 5 Python compile, 1 CLI test)
 - All templates verified: TypeScript compiles clean, Python syntax valid, CLI scaffolding works
-- Landing page updated for OSS (GitHub CTAs, no pricing)
-- 2 technical articles written (MCP server tutorial + transports guide)
+- CLI fixed for npm publishing: templates bundled via prepublishOnly, path resolution from package root
+- 3 technical articles published on dev.to (atlasforge_dev)
 - Working example server (time-server) included
 - GitHub Actions CI runs on every push/PR (Node 22)
 - CHANGELOG.md added
+- GitHub topics set: mcp, model-context-protocol, ai-agent, claude, typescript, python, etc.
 
 ## Income generation efforts (2026-09-02)
 - **Gumroad product #1 (LIVE):** "The AI Coding Agent Power Pack" — $19
@@ -213,15 +216,13 @@ AgentForge/
 - [x] Draft Upwork profile
 
 ## Next steps (priority order)
-1. **Publish Docker Recipes pack on Gumroad** — subagent building, needs packaging + listing
-2. **Publish CI/CD Templates pack on Gumroad** — subagent building, needs packaging + listing
-3. **Publish CLI to npm** — blocked on `npm login` (needs user auth)
-4. **Deploy landing page** — blocked on `vercel login` (needs user auth)
-5. **Activate Upwork account** — needs user ID verification, profile drafted
-6. **Bug bounties** — research in progress, then start scanning repos
-7. **Share authentically** — HN, Reddit r/MCP, r/LocalLLaMA, dev.to
-8. **Take down or make free the old Gumroad listing** — align with OSS pivot
-9. **Add more templates** — based on community feedback/requests
+1. **Publish CLI to npm** — blocked on `npm login` (DataDome captcha blocks automated signup)
+2. **Build Reddit karma** — daily scheduled task runs `devin` with prompt file to post one relevant comment per day. 3 comments posted so far (r/docker x2, r/devops x1). Need ~50-100 karma before posting to subreddits.
+3. **Activate Upwork account** — needs user ID verification, profile drafted
+4. **Bug bounties** — research in progress, then start scanning repos
+5. **Share authentically** — HN, Reddit r/MCP, r/LocalLLaMA, dev.to (4th article)
+6. **Take down or make free the old Gumroad listing** — align with OSS pivot
+7. **Add more templates** — based on community feedback/requests
 
 ## MCP servers in use
 See `C:\Users\short\AppData\Roaming\devin\mcp_config.json`:
