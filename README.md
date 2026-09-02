@@ -77,6 +77,14 @@ Each template has its own README with setup instructions, environment variables,
 
 The MCP spec is straightforward but the surrounding plumbing — transports, error handling, validation, deployment, client config — is tedious and repetitive. These templates handle all of that so you can focus on your tools.
 
+## Articles
+
+Building and testing these templates led to some writeups on browser automation and CI/CD:
+
+- [I spent 4 hours uploading a file to a website with Chrome DevTools Protocol](https://dev.to/atlasforge_dev/i-spent-4-hours-uploading-a-file-to-a-website-with-chrome-devtools-protocol-3j53)
+- [Gumroad's auth flow is hostile to automation — here's the exact chain that works](https://dev.to/atlasforge_dev/gumroads-auth-flow-is-hostile-to-automation-heres-the-exact-chain-that-works-49pe)
+- [Why I couldn't publish on Medium with Chrome DevTools Protocol](https://dev.to/atlasforge_dev/why-i-couldnt-publish-on-medium-with-chrome-devtools-protocol-35cm)
+
 ## Contributing
 
 Contributions welcome. If you've built an MCP server pattern that isn't covered here, open a PR.
