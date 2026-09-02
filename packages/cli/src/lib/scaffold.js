@@ -3,6 +3,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 // Directories and files that should never be copied from a template.
 const EXCLUDE_DIRS = new Set(["node_modules", "dist", ".git", "__pycache__", ".venv", "venv"]);
@@ -16,13 +17,8 @@ const EXCLUDE_FILES = new Set([".env", "package-lock.json", "yarn.lock", "pnpm-l
  */
 export function getProjectRoot() {
   // packages/cli/src/lib/scaffold.js → up 4 = repo root
-  return path.resolve(
-    path.dirname(new URL(import.meta.url).pathname.replace(/^\//, "")),
-    "..",
-    "..",
-    "..",
-    ".."
-  );
+  const __filename = fileURLToPath(import.meta.url);
+  return path.resolve(path.dirname(__filename), "..", "..", "..", "..");
 }
 
 /**
