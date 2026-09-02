@@ -1,16 +1,19 @@
 # AgentForge — MCP Server + AI Agent Starter Kit
 
 ## Project status (2026-09-01)
-- **Pivot in progress**: Was a paid Gumroad product ($49). User decided
-  marketing a paid boilerplate pack with no audience was futile. Pivoting
-  to open-source on GitHub for credibility/audience building.
+- **Open-sourced!** Repo is live at **https://github.com/thenextfreud/agentforge**
+- Pivoted from paid Gumroad product ($49) to free open-source (MIT).
+  Rationale: selling a boilerplate pack with no audience/reputation was
+  futile. Free on GitHub builds credibility and audience; monetization
+  can come later via consulting, custom builds, or premium tooling.
 - **Gumroad listing still live** at `https://forgea5.gumroad.com/l/agentforge`
   ($49). Email on Gumroad account updated to `forgea524@agentmail.to`
   and confirmed. Old Gmail (`forgea542@gmail.com`) was disabled by Google
-  bot detection — do NOT use it.
-- **No git repo yet** — `git init` + GitHub push is the next step.
+  bot detection — do NOT use it. Consider taking down the Gumroad listing
+  or making it free to align with the OSS pivot.
 
 ## Identity / accounts
+- **GitHub**: `thenextfreud` — repo at `thenextfreud/agentforge`
 - **Gumroad**: Atlas Forge account, email `forgea524@agentmail.to`
 - **AgentMail inbox**: `forgea524@agentmail.to` — accessible via AgentMail
   MCP server. API key is inbox-scoped (`am_us_inbox_...`), can read/send
@@ -33,7 +36,7 @@
 ```
 AgentForge/
 ├── package.json              # workspace root (npm workspaces)
-├── README.md                 # main readme (currently sales-oriented, needs rewrite for OSS)
+├── README.md                 # OSS readme (developer-focused, not salesy)
 ├── GUMROAD_LISTING.md        # original Gumroad sales copy (archive)
 ├── LICENSE                   # MIT
 ├── .credentials              # DO NOT COMMIT — Gumroad/AgentMail creds
@@ -59,10 +62,13 @@ AgentForge/
 │       └── 05-human-in-loop/
 ├── packages/
 │   └── cli/                  # `npx agentforge init` scaffolding tool
-├── landing/                  # Next.js landing page (conversion-optimized)
+├── landing/                  # Next.js landing page (needs OSS rework)
 │   └── app/, components/
 └── docs/
-    └── getting-started.md
+    ├── getting-started.md
+    ├── client-configs/       # Claude Desktop, Cursor, Windsurf, VS Code
+    ├── deployment/           # Docker, Cloudflare, Vercel, Railway, Fly.io
+    └── patterns/             # Architecture, security, testing, agent design
 ```
 
 ## Stack
@@ -73,20 +79,38 @@ AgentForge/
 
 ## Key decisions
 - MIT license for open-source release
-- CLI tool published as `agentforge` on npm (via `npx agentforge init`)
-- Landing page exists but may need rework for OSS (remove $49 pricing,
-  add GitHub stars/clone CTA instead of Gumroad checkout)
+- CLI tool to be published as `agentforge` on npm (via `npx agentforge init`)
+- Landing page needs rework: remove $49 pricing, add GitHub stars/clone CTA
+
+## Completed
+- [x] Build all templates (10 MCP servers + 5 agent patterns)
+- [x] Write docs (getting started, deployment, client configs, patterns)
+- [x] Build CLI scaffolding tool
+- [x] Build landing page
+- [x] Rewrite README for OSS audience
+- [x] `git init` + initial commit (288 files, 45,898 insertions)
+- [x] Create GitHub repo and push: https://github.com/thenextfreud/agentforge
 
 ## Next steps (priority order)
-1. `git init` + initial commit
-2. Create GitHub repo (`agentforge` or `agentforge-kit`), push
-3. Rewrite README for open-source audience (not salesy)
-4. Update landing page — swap Gumroad CTA for GitHub link
-5. Write one genuinely useful technical article (not spam)
-6. Optionally: publish CLI to npm
+1. Write one genuinely useful technical article about MCP (not spam)
+2. Update landing page — swap Gumroad CTA for GitHub link
+3. Publish CLI to npm (`agentforge`)
+4. Share in relevant communities (HN, Reddit r/MCP, r/LocalLLaMA — authentically)
+5. Consider taking down or making free the Gumroad listing
 
 ## MCP servers in use
 See `C:\Users\short\AppData\Roaming\devin\mcp_config.json`:
 - `agentmail` — email read/send for `forgea524@agentmail.to`
 - `chrome-devtools` — browser automation (connects to port 9222)
 - Others: azure, onimcp, puppeteer, atlassian, azure-devops, etc.
+
+## Lessons learned
+- Selling boilerplate packs with no audience is an uphill battle. Free
+  + GitHub stars is the proven path for dev tooling adoption.
+- Google bot detection will disable accounts created via automation.
+  Use AgentMail or similar services for email instead of Gmail.
+- reCAPTCHA blocks automated signup on most platforms. Manual solving
+  is sometimes unavoidable.
+- chrome-devtools MCP needs a `DevToolsActivePort` file in the default
+  Chrome user data dir. When using a custom profile, create this file
+  manually with the port number and websocket path.
