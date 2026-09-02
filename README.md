@@ -2,6 +2,7 @@
 
 > Production-ready templates for building [MCP servers](https://modelcontextprotocol.io/) and AI agents.
 >
+> [![npm version](https://img.shields.io/npm/v/@atlasforge/agentforge.svg)](https://www.npmjs.com/package/@atlasforge/agentforge)
 > Landing page: https://thenextfreud.github.io/agentforge/
 
 Stop writing boilerplate. Pick a template, run `npm install` (or `pip install`), and start building your actual logic.
@@ -87,6 +88,7 @@ Building and testing these templates led to some writeups on browser automation 
 - [Gumroad's auth flow is hostile to automation — here's the exact chain that works](https://dev.to/atlasforge_dev/gumroads-auth-flow-is-hostile-to-automation-heres-the-exact-chain-that-works-49pe)
 - [Why I couldn't publish on Medium with Chrome DevTools Protocol](https://dev.to/atlasforge_dev/why-i-couldnt-publish-on-medium-with-chrome-devtools-protocol-35cm)
 - [I built 10 MCP server templates so you don't have to write the same boilerplate I did](https://dev.to/atlasforge_dev/i-built-10-mcp-server-templates-so-you-dont-have-to-write-the-same-boilerplate-i-did-2pdf)
+- [I published an MCP server scaffolding CLI to npm — here's what broke and what I learned](https://dev.to/atlasforge_dev/i-published-an-mcp-server-scaffolding-cli-to-npm-heres-what-broke-and-what-i-learned-cel)
 
 ## Contributing
 
