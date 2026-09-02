@@ -1,5 +1,5 @@
 {
-  "name": "agentforge",
+  "name": "@atlasforge/agentforge",
   "version": "1.0.0",
   "description": "Production-ready AI Agent + MCP Server starter kit — scaffold new projects from 15 battle-tested templates.",
   "type": "module",

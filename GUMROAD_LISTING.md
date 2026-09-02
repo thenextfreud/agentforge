@@ -42,7 +42,7 @@ AgentForge is the most comprehensive MCP Server and AI Agent starter kit availab
 | 4 | Multi-Agent | Coordinator + worker orchestration with parallel execution |
 | 5 | Human-in-Loop | Approval gates for sensitive operations with risk classification |
 
-**CLI Scaffolding Tool** (`npx agentforge init`):
+**CLI Scaffolding Tool** (`npx @atlasforge/agentforge init`):
 - Interactive template selection
 - Instant project scaffolding
 - Zero dependencies (pure Node.js)
@@ -126,7 +126,7 @@ agentforge/
 │   ├── python/         # 5 MCP server templates (Python)
 │   └── agents/         # 5 AI agent patterns (TS)
 ├── packages/
-│   └── cli/            # AgentForge CLI (npx agentforge init)
+│   └── cli/            # AgentForge CLI (npx @atlasforge/agentforge init)
 ├── docs/               # Comprehensive documentation
 │   ├── getting-started.md
 │   ├── client-configs/ # Claude, Cursor, Windsurf, VS Code guides

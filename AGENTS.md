@@ -165,7 +165,7 @@ AgentForge/
 │       ├── 04-multi-agent/
 │       └── 05-human-in-loop/
 ├── packages/
-│   └── cli/                  # `npx agentforge init` scaffolding tool
+│   └── cli/                  # `npx @atlasforge/agentforge init` scaffolding tool
 ├── examples/
 │   └── time-server/          # Working example MCP server
 ├── landing/                  # Next.js landing page (OSS, GitHub CTAs)
@@ -186,7 +186,7 @@ AgentForge/
 
 ## Key decisions
 - MIT license for open-source release
-- CLI tool to be published as `agentforge` on npm (via `npx agentforge init`)
+- CLI tool to be published as `agentforge` on npm (via `npx @atlasforge/agentforge init`)
 - Landing page uses GitHub CTAs, no pricing
 - Pivoted from paid Gumroad product ($49) to free OSS for credibility/audience
 - Now building separate Gumroad products for income (not AgentForge itself)

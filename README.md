@@ -43,7 +43,7 @@ Stop writing boilerplate. Pick a template, run `npm install` (or `pip install`),
 ### CLI Scaffolding
 
 ```bash
-npx agentforge init my-server
+npx @atlasforge/agentforge init my-server
 ```
 
 Interactive template selection, language choice, instant project setup.
@@ -65,7 +65,7 @@ Setup instructions for Claude Desktop, Cursor, Windsurf, Claude Code, and VS Cod
 
 ```bash
 # Scaffold a new project
-npx agentforge init my-mcp-server
+npx @atlasforge/agentforge init my-mcp-server
 
 # Or clone a template directly
 cd templates/typescript/01-hello-world-stdio

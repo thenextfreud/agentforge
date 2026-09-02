@@ -8,7 +8,7 @@
 
 ```bash
 # Scaffold a new project (interactive)
-npx agentforge init my-mcp-server
+npx @atlasforge/agentforge init my-mcp-server
 
 # Or run directly from this repo
 node packages/cli/src/index.js init my-mcp-server

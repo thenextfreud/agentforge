@@ -41,7 +41,7 @@ You can start a new AgentForge project in one of two ways.
 The fastest way to get started is with the `agentforge` CLI, which scaffolds a new project with interactive prompts:
 
 ```bash
-npx agentforge init my-mcp-server
+npx @atlasforge/agentforge init my-mcp-server
 ```
 
 The CLI will ask you to choose:
@@ -79,7 +79,7 @@ This walkthrough uses the `hello-world-stdio` template, which is the simplest wa
 ### Step 1: Scaffold the project
 
 ```bash
-npx agentforge init hello-server --template hello-world-stdio
+npx @atlasforge/agentforge init hello-server --template hello-world-stdio
 cd hello-server
 pnpm install
 ```
@@ -150,7 +150,7 @@ node dist/index.js
 The server will start and wait for JSON-RPC messages on stdin. Press `Ctrl+C` to stop it. For a more interactive test, use the AgentForge inspector:
 
 ```bash
-npx agentforge inspect
+npx @atlasforge/agentforge inspect
 ```
 
 This opens a web-based UI where you can call tools, view resources, and inspect the protocol traffic.
@@ -242,7 +242,7 @@ Now that you have a working MCP server connected to a client, here are some reco
 
 ### Explore more templates
 
-Run `npx agentforge init` and explore the full template gallery:
+Run `npx @atlasforge/agentforge init` and explore the full template gallery:
 
 | Template | Description |
 |---|---|

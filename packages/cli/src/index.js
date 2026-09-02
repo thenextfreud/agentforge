@@ -26,7 +26,7 @@ const HELP = `
 
   USAGE:
     agentforge <command> [options]
-    npx agentforge <command> [options]
+    npx @atlasforge/agentforge <command> [options]
 
   COMMANDS:
     init [project-name]    Scaffold a new project from a template (interactive)

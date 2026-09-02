@@ -4,7 +4,7 @@ import { GITHUB_URL } from "./data";
 
 const included = [
   "All 15 templates (10 MCP servers + 5 agent patterns)",
-  "CLI scaffolding tool (npx agentforge init)",
+  "CLI scaffolding tool (npx @atlasforge/agentforge init)",
   "TypeScript + Python implementations",
   "Docker configs + deployment guides",
   "Client integration files (Claude, Cursor, Windsurf, VS Code)",
@@ -65,7 +65,7 @@ export default function Pricing() {
                   <ArrowRight className="h-4.5 w-4.5" />
                 </a>
                 <p className="mt-3 text-xs text-zinc-500">
-                  git clone · npx agentforge init · npm install
+                  git clone · npx @atlasforge/agentforge init · npm install
                 </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-3">

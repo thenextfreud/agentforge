@@ -7,7 +7,7 @@ All notable changes to AgentForge will be documented in this file.
 ### Added
 - 10 MCP server templates (5 TypeScript, 5 Python)
 - 5 AI agent pattern templates (TypeScript)
-- CLI scaffolding tool (`npx agentforge init`)
+- CLI scaffolding tool (`npx @atlasforge/agentforge init`)
 - Deployment guides for Docker, Cloudflare Workers, Vercel, Railway, Fly.io, self-hosting
 - Client integration guides for Claude Desktop, Cursor, Windsurf, VS Code
 - Architecture, security, testing, and agent design docs

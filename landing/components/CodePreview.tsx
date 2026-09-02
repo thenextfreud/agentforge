@@ -10,7 +10,7 @@ type Line = {
 };
 
 const script: Line[] = [
-  { text: "$ npx agentforge init my-server", type: "cmd" },
+  { text: "$ npx @atlasforge/agentforge init my-server", type: "cmd" },
   { text: "✔ Select template › REST API Wrapper (TypeScript)", type: "out", delay: 350 },
   { text: "✔ Transport › stdio", type: "out", delay: 250 },
   { text: "✔ Auth › OAuth 2.1", type: "out", delay: 250 },

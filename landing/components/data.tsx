@@ -28,7 +28,7 @@ export const features = [
   {
     icon: Terminal,
     title: "CLI Scaffolding",
-    desc: "npx agentforge init and you're running in 30 seconds.",
+    desc: "npx @atlasforge/agentforge init and you're running in 30 seconds.",
   },
   {
     icon: Rocket,
@@ -183,7 +183,7 @@ export const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Run npx agentforge init to scaffold a new project, or clone a template directly from the GitHub repo.",
+    a: "Run npx @atlasforge/agentforge init to scaffold a new project, or clone a template directly from the GitHub repo.",
   },
   {
     q: "What languages are supported?",
