@@ -1,11 +1,13 @@
 # AgentForge — MCP Server + AI Agent Starter Kit
 
-## Project status (2026-09-01)
-- **Open-sourced!** Repo is live at **https://github.com/thenextfreud/agentforge**
-- Pivoted from paid Gumroad product ($49) to free open-source (MIT).
-  Rationale: selling a boilerplate pack with no audience/reputation was
-  futile. Free on GitHub builds credibility and audience; monetization
-  can come later via consulting, custom builds, or premium tooling.
+## Project status (2026-09-02)
+- **Open-sourced and polished.** Repo live at **https://github.com/thenextfreud/agentforge**
+- 8 commits, 298+ files, CI passing (17 jobs: 11 TS typecheck, 5 Python compile, 1 CLI test)
+- All templates verified: TypeScript compiles clean, Python syntax valid, CLI scaffolding works
+- Landing page updated for OSS (GitHub CTAs, no pricing)
+- 2 technical articles written (MCP server tutorial + transports guide)
+- Working example server (time-server) included
+- GitHub Actions CI runs on every push/PR
 - **Gumroad listing still live** at `https://forgea5.gumroad.com/l/agentforge`
   ($49). Email on Gumroad account updated to `forgea524@agentmail.to`
   and confirmed. Old Gmail (`forgea542@gmail.com`) was disabled by Google
@@ -90,13 +92,25 @@ AgentForge/
 - [x] Rewrite README for OSS audience
 - [x] `git init` + initial commit (288 files, 45,898 insertions)
 - [x] Create GitHub repo and push: https://github.com/thenextfreud/agentforge
+- [x] Verify all TS templates compile (tsc --noEmit)
+- [x] Verify all Python templates compile (py_compile)
+- [x] Verify CLI scaffolding works end-to-end
+- [x] Add `--template` flag to CLI for non-interactive use
+- [x] Fix CLI path resolution bug (fileURLToPath instead of URL hack)
+- [x] Update landing page for OSS (GitHub CTAs, no pricing)
+- [x] Add CONTRIBUTING.md and issue templates
+- [x] Set GitHub topics (13 topics)
+- [x] Add GitHub Actions CI (17 jobs, all passing)
+- [x] Write 2 technical articles (MCP tutorial + transports guide)
+- [x] Add working time-server example
+- [x] Add CHANGELOG.md
 
 ## Next steps (priority order)
-1. Write one genuinely useful technical article about MCP (not spam)
-2. Update landing page — swap Gumroad CTA for GitHub link
-3. Publish CLI to npm (`agentforge`)
-4. Share in relevant communities (HN, Reddit r/MCP, r/LocalLLaMA — authentically)
-5. Consider taking down or making free the Gumroad listing
+1. **Publish CLI to npm** — blocked on `npm login` (needs user auth)
+2. **Deploy landing page** — blocked on `vercel login` (needs user auth)
+3. **Share authentically** — HN, Reddit r/MCP, r/LocalLLaMA, dev.to
+4. **Take down or make free the Gumroad listing** — align with OSS pivot
+5. **Add more templates** — based on community feedback/requests
 
 ## MCP servers in use
 See `C:\Users\short\AppData\Roaming\devin\mcp_config.json`:
