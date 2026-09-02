@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-tool-toolkit"
+version = "1.0.0"
+description = "Modular multi-tool MCP server with shared session state and tool composition"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=1.10",
+    "pydantic>=2.7",
+    "python-dotenv>=1.0",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+multi-tool-toolkit = "src.server:main"
+
+[tool.setuptools]
+packages = ["src", "src.lib", "src.tools"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

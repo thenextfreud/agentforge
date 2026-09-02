@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streaming-server"
+version = "1.0.0"
+description = "SSE/Streamable HTTP MCP server with progress reporting, cancellation, and connection management"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=1.10",
+    "pydantic>=2.7",
+    "python-dotenv>=1.0",
+    "uvicorn>=0.30",
+    "starlette>=0.37",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "httpx>=0.27"]
+
+[project.scripts]
+streaming-server = "src.server:main"
+
+[tool.setuptools]
+packages = ["src", "src.lib", "src.tools"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

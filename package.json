@@ -1,0 +1,23 @@
+{
+  "name": "agentforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready AI Agent + MCP Server starter kit",
+  "scripts": {
+    "cli": "node packages/cli/src/index.js",
+    "cli:link": "cd packages/cli && npm link",
+    "landing:dev": "cd landing && npm run dev",
+    "landing:build": "cd landing && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "windsurf",
+    "starter-kit",
+    "boilerplate"
+  ],
+  "license": "Commercial"
+}

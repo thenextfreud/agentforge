@@ -1,0 +1,21 @@
+{
+  "name": "mcp-web-search-fetch",
+  "version": "1.0.0",
+  "description": "Web search and URL fetching MCP server with pluggable search providers (DuckDuckGo, Brave, Tavily, SerpAPI) and HTML text extraction",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
