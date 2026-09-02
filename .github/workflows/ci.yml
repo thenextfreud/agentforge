@@ -29,11 +29,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install and typecheck
+      - name: Install, typecheck, and test
         working-directory: ${{ matrix.template }}
         run: |
           npm install
           npx tsc --noEmit
+          npm test
 
   verify-python:
     name: Verify Python templates
