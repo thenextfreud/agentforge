@@ -68,6 +68,7 @@ jobs:
       - name: Test CLI commands
         working-directory: packages/cli
         run: |
+          node scripts/copy-templates.js
           node src/index.js --help
           node src/index.js --version
           node src/index.js list
