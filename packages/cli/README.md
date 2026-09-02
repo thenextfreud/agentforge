@@ -102,7 +102,7 @@ Show the CLI version.
 
 ```
 packages/cli/
-├── package.json              # npm package config (name: "agentforge")
+├── package.json              # npm package config (name: "@atlasforge/agentforge")
 ├── README.md                 # this file
 ├── .gitignore
 └── src/
@@ -123,4 +123,4 @@ packages/cli/
 
 ## License
 
-Commercial license. See the project root for details.
+MIT license. See the project root for details.
